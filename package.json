@@ -1,7 +1,7 @@
 {
   "name": "vue-steam-chat",
   "version": "0.0.1",
-  "description": "A Vue.js component module",
+  "description": "A Vue.js component to imitate the steam chat.",
   "author": "igeligel <kevinigeligeligel@gmail.com>",
   "main": "dist/index.js",
   "license": "MIT",
@@ -13,7 +13,11 @@
   },
   "keywords": [
     "vue",
-    "component"
+    "component",
+    "steam",
+    "chat",
+    "csgo",
+    "gambling"
   ],
   "files": [
     "dist/"
