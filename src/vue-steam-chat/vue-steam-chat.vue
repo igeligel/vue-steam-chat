@@ -38,6 +38,13 @@ export default {
     };
   },
   props: {
+    /**
+    An array of messages which will be shown. A message consists of the three arguments
+    `time`, `username` and `text`.
+    `time` should be parsable by the `new Date()` function.
+    `username` is a simple `string`.
+    `text` Is a simple `string`.
+    */
     messages: {
       type: Array,
     },
