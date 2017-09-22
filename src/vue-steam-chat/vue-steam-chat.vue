@@ -47,6 +47,7 @@ export default {
     */
     messages: {
       type: Array,
+      default: [],
     },
   },
   methods: {
