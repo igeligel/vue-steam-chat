@@ -1,6 +1,6 @@
 # vue-steam-chat - a steam like chat component
 
-![vue steam chat showcase picture in default size](./docs/vue-steam-chat-1.png "vue steam chat showcase picture in default size")
+![vue steam chat showcase picture in default size](https://i.imgur.com/1mCVWRa.png "vue steam chat showcase picture in default size")
 
 [![CircleCI](https://circleci.com/gh/igeligel/vue-steam-chat.svg?style=svg)](https://circleci.com/gh/igeligel/vue-steam-chat)
 [![Coverage Status](https://coveralls.io/repos/github/igeligel/vue-steam-chat/badge.svg?branch=master)](https://coveralls.io/github/igeligel/vue-steam-chat?branch=master)
@@ -48,7 +48,7 @@ Somewhere in your Vue.js single file component, you need to add the dependency t
 import VueSteamChat from 'vue-steam-chat';
 
 // This is required for styling the component. You can also write your own stylesheet. You can find my styles inside the vue component
-require('./node_modules/vue-steam-chat/index.css');
+require('vue-steam-chat/dist/index.css');
 
 export default {
   name: 'vue-steam-chat',
@@ -101,9 +101,9 @@ This will open a `Vue Styleguidist` under http://localhost:6062 with the compone
 
 - Live version is work in progress
 
-![vue steam chat showcase picture in default size](./docs/vue-steam-chat-1.png "vue steam chat showcase picture in default size")
+![vue steam chat showcase picture in default size](https://i.imgur.com/1mCVWRa.png "vue steam chat showcase picture in default size")
 
-![vue steam chat showcase in responsive version](./docs/vue-steam-chat-2.png "vue steam chat showcase in responsive version")
+![vue steam chat showcase in responsive version](https://i.imgur.com/M8IZ8GT.png "vue steam chat showcase in responsive version")
 
 ## Motivation
 
