@@ -11,7 +11,7 @@ Put here the vue-steam-chat component usage instructions
     }, {
       time: 1506117510,
       username: 'Gaben',
-      text: '$$$',
+      text: 'Multiline message is important that this is working lorem ipsum',
     }];
 
     <div>
