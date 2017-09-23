@@ -1,16 +1,12 @@
 <template>
   <div class="vue-steam-chat__message-area">
-    <div class="chatlog">
-        <div class="chat_dialog">
-          <div class="chat_dialog_content">
-            <div class="chat_dialog_scroll">
-              <div class="chat_dialog_content_inner">
-                <div class="chat_message" v-for="message in messages">
-                  <span class="chat_timestamp" v-text="formatTime(message.time)"></span> 
-                  <span class="personaOnline" v-text="message.username"></span>: 
-                  <span class="chat_message_text" v-text="message.text"></span>
-                </div>
-              </div>
+      <div class="chat_dialog_content">
+        <div class="chat_dialog_scroll">
+          <div class="chat_dialog_content_inner">
+            <div class="chat_message" v-for="message in messages">
+              <span class="chat_timestamp" v-text="formatTime(message.time)"></span> 
+              <span class="personaOnline" v-text="message.username"></span>: 
+              <span class="chat_message_text" v-text="message.text"></span>
             </div>
           </div>
         </div>
@@ -73,7 +69,7 @@ export default {
 .vue-steam-chat__message-area {
   background-color: #383635;
   width: 100%;
-  height: 568px;
+  height: 100%;
   position: relative;
   border: 1px solid #000;
   box-shadow: 1px 1px 0 0 #373b42;
@@ -84,37 +80,28 @@ export default {
   text-align: left;
 }
 
-.chatlog {
-  color: #8F98A0;
-  display: block;
-  font-size: 14px;
-  height: 88px;
-  text-align: left;
-  width: 100%;
-}
-
 .chat_dialog_content {
   background-color: #1c1b19;
   background-image: linear-gradient(#383635 5%, #1C1B19 95%);
   border: 1px solid #4D4D48;
   border-top-width: 0px;
   border-radius: 3px;
-  bottom: 114px;
   color: #8F98A0;
   font-size: 14px;
   left: 9px;
   right: 9px;
+  top: 9px;
   text-align: left;
   position: absolute;
   width: calc(100% - 20px);
-  height: 445px;
+  height: calc(100% - 123px);
 }
 
 .chat_dialog_scroll {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAeCAYAAADtlXTHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNCRjdDRUQxM0E3RTExRTJCRUNBQUM1MDg0ODYyMzEyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNCRjdDRUQyM0E3RTExRTJCRUNBQUM1MDg0ODYyMzEyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0JGN0NFQ0YzQTdFMTFFMkJFQ0FBQzUwODQ4NjIzMTIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0JGN0NFRDAzQTdFMTFFMkJFQ0FBQzUwODQ4NjIzMTIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5FqRfaAAAALElEQVR42mKQl5cvZmJgYPgHIv6isv6gssDEb1wsbNzfeLX9wWIRxHKAAAMAdZsdmnuJRSUAAAAASUVORK5CYII=");
   background-position: 50% 0%;
   background-repeat: repeat-x;
-  height: 445px;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   position: absolute;
