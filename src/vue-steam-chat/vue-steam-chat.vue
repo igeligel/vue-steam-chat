@@ -6,9 +6,9 @@
             <div class="chat_dialog_scroll">
               <div class="chat_dialog_content_inner">
                 <div class="chat_message" v-for="message in messages">
-                  <span class="chat_timestamp">{{formatTime(message.time)}} </span>
-                  <span class="personaOnline">{{message.username}}</span>: 
-                  <span class="chat_message_text">{{message.text}}</span>
+                  <span class="chat_timestamp" v-text="formatTime(message.time)"></span> 
+                  <span class="personaOnline" v-text="message.username"></span>: 
+                  <span class="chat_message_text" v-text="message.text"></span>
                 </div>
               </div>
             </div>
@@ -142,22 +142,18 @@ export default {
   color: #8F98A0;
   display: block;
   font-size: 14px;
-  padding-bottom: 9px;
-  padding-left: 5px;
-  padding-right: 9px;
-  padding-top: 9px;
+  padding: 9px 9px 9px 5px;
   text-align: left;
   width: 90%;
   word-wrap: break-word;
 }
 
-.chat_message_self{
+.chat_message_self {
   color: #8F98A0;
   display: block;
   font-size: 14px;
   height: 16px;
   text-align: left;
-  width: 0px;
   word-wrap: break-word;
 }
 
@@ -191,7 +187,7 @@ export default {
   word-wrap: break-word;
 }
 
-#chatform{
+#chatform {
   bottom: 0px;
   color: #8F98A0;
   display: block;
@@ -212,29 +208,15 @@ export default {
   width: 302px;
 }
 
-.gray_bevel_fullwidth_chatform_textarea{
+.gray_bevel_fullwidth_chatform_textarea {
   background-color: rgba(0, 0, 0, 0.2);
-  border-bottom-color: #212121;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+  border: 1px solid #212121;
+  border-radius: 3px;
   border-image-outset: 0px;
   border-image-repeat: stretch;
   border-image-slice: 100%;
   border-image-source: none;
   border-image-width: 1;
-  border-left-color: #212121;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-right-color: #212121;
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-top-color: #212121;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-top-style: solid;
-  border-top-width: 1px;
   box-shadow: #3D3D3D 2px 2px 4px 1px inset;
   color: #C6D4DF;
   display: block;
@@ -244,15 +226,12 @@ export default {
   outline-color: #C6D4DF;
   outline-style: none;
   outline-width: 0px;
-  padding-bottom: 4px;
-  padding-left: 6px;
-  padding-right: 6px;
-  padding-top: 4px;
+  padding: 4px 6px;
   text-align: left;
   width: 288px;
 }
 
-#chatmessage{
+#chatmessage {
   background-color: rgba(0, 0, 0, 0);
   border-bottom-color: rgb(198, 212, 223);
   border-bottom-style: none;
