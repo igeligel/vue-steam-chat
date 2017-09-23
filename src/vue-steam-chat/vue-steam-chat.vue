@@ -94,20 +94,11 @@ export default {
 }
 
 .chat_dialog_content {
-  background-attachment:scroll;
-  background-clip: border-box;
   background-color: #1c1b19;
   background-image: linear-gradient(#383635 5%, #1C1B19 95%);
-  background-origin: padding-box;
-  background-size: auto;
   border: 1px solid #4D4D48;
   border-top-width: 0px;
   border-radius: 3px;
-  border-image-outset: 0px;
-  border-image-repeat: stretch;
-  border-image-slice: 100%;
-  border-image-source: none;
-  border-image-width: 1;
   bottom: 114px;
   color: #8F98A0;
   font-size: 14px;
