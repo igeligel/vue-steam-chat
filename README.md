@@ -4,7 +4,7 @@
 
 [![CircleCI](https://circleci.com/gh/igeligel/vue-steam-chat.svg?style=svg)](https://circleci.com/gh/igeligel/vue-steam-chat)
 [![Coverage Status](https://coveralls.io/repos/github/igeligel/vue-steam-chat/badge.svg?branch=master)](https://coveralls.io/github/igeligel/vue-steam-chat?branch=master)
-[![npm version](https://img.shields.io/npm/v/vue.steam-chat.svg)](https://www.npmjs.com/package/vue-steam-chat)
+[![npm version](https://img.shields.io/npm/v/vue-steam-chat.svg)](https://www.npmjs.com/package/vue-steam-chat)
 [![npm downloads](https://img.shields.io/npm/dt/vue-steam-chat.svg)](https://www.npmjs.com/package/vue-steam-chat)
  <a href="https://www.paypal.me/kevinpeters96/1"><img src="https://img.shields.io/badge/Donate-Paypal-003087.svg?style=flat" alt="badge Donate" /></a> <a href="https://steamcommunity.com/tradeoffer/new/?partner=68364320&token=CzTCv8JM"><img src="https://img.shields.io/badge/Donate-Steam-000000.svg?style=flat" alt="badge Donate" /></a> <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-1da1f2.svg?style=flat" alt="badge License" /></a>
 
