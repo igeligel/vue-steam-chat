@@ -122,10 +122,9 @@ export default {
   width: 300px;
 }
 
-.chat_dialog_content_inner{
+.chat_dialog_content_inner {
   color: #8F98A0;
   display: block;
-  font-size: 14px;
   padding: 9px 9px 9px 5px;
   text-align: left;
   width: 90%;
