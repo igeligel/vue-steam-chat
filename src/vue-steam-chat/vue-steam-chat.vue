@@ -1,6 +1,6 @@
 <template>
   <div class="vue-steam-chat__message-area">
-    <div id="chatlog">
+    <div class="chatlog">
         <div class="chat_dialog">
           <div class="chat_dialog_content">
             <div class="chat_dialog_scroll">
@@ -15,9 +15,9 @@
           </div>
         </div>
       </div>
-    <form id="chatform" onsubmit="return false;">
+    <form class="chatform" onsubmit="return false;">
       <div class="gray_bevel_fullwidth_chatform_textarea">
-        <textarea rows="2" name="message" id="chatmessage" v-model="message">
+        <textarea rows="2" name="message" class="chatmessage" v-model="message">
         </textarea>
       </div>
       <div class="chatform_footer">
@@ -72,7 +72,7 @@ export default {
 
 .vue-steam-chat__message-area {
   background-color: #383635;
-  width: 320px;
+  width: 100%;
   height: 568px;
   position: relative;
   border: 1px solid #000;
@@ -84,13 +84,13 @@ export default {
   text-align: left;
 }
 
-#chatlog {
+.chatlog {
   color: #8F98A0;
   display: block;
   font-size: 14px;
   height: 88px;
   text-align: left;
-  width: 320px;
+  width: 100%;
 }
 
 .chat_dialog_content {
@@ -115,11 +115,11 @@ export default {
   background-position: 50% 0%;
   background-repeat: repeat-x;
   height: 445px;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: auto;
   position: absolute;
   text-align: left;
-  width: 300px;
+  width: 100%;
 }
 
 .chat_dialog_content_inner {
@@ -127,7 +127,7 @@ export default {
   display: block;
   padding: 9px 9px 9px 5px;
   text-align: left;
-  width: 90%;
+  width: 100%;
   word-wrap: break-word;
 }
 
@@ -144,7 +144,6 @@ export default {
   display: inline;
   height: auto;
   text-align: left;
-  width: auto;
   word-wrap: break-word;
 }
 
@@ -153,7 +152,6 @@ export default {
   display: inline;
   height: auto;
   text-align: left;
-  width: auto;
   word-wrap: break-word;
 }
 
@@ -163,11 +161,11 @@ export default {
   font-size: 14px;
   height: 100%;
   text-align: left;
-  width: 282px;
+  width: calc(100% - 18px);
   word-wrap: break-word;
 }
 
-#chatform {
+.chatform {
   bottom: 0px;
   color: #8F98A0;
   display: block;
@@ -177,7 +175,7 @@ export default {
   position: absolute;
   right: 9px;
   text-align: left;
-  width: 302px;
+  width: calc(100% - 18px);
 }
 
 .gray_bevel_fullwidth_chatform_textarea {
@@ -191,10 +189,9 @@ export default {
   margin-bottom: 6px;
   padding: 4px 6px;
   text-align: left;
-  width: 288px;
 }
 
-#chatmessage {
+.chatmessage {
   background-color: rgba(0, 0, 0, 0);
   border: 0px;
   color: #c6d4df;
@@ -203,17 +200,13 @@ export default {
   outline-width: 0px; 
   padding: 2px;
   resize: none;
-  width: 288px;
+  width: 100%;
 }
 
 .chatform_footer {
-  color: #8f98a0;
   display: block;
-  font-size: 14px;
-  height: 36px;
   line-height: 36px;
   text-align: right;
-  width: 302px;
 }
 
 .sendButton {
