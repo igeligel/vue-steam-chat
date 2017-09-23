@@ -2,7 +2,7 @@
 
 ![vue steam chat showcase picture in default size](https://i.imgur.com/1mCVWRa.png "vue steam chat showcase picture in default size")
 
-[![CircleCI](https://circleci.com/gh/igeligel/vue-steam-chat.svg?style=svg)](https://circleci.com/gh/igeligel/vue-steam-chat)
+[![CircleCI](https://circleci.com/gh/igeligel/vue-steam-chat.svg?style=shield)](https://circleci.com/gh/igeligel/vue-steam-chat)
 [![Coverage Status](https://coveralls.io/repos/github/igeligel/vue-steam-chat/badge.svg?branch=master)](https://coveralls.io/github/igeligel/vue-steam-chat?branch=master)
 [![npm version](https://img.shields.io/npm/v/vue-steam-chat.svg)](https://www.npmjs.com/package/vue-steam-chat)
 [![npm downloads](https://img.shields.io/npm/dt/vue-steam-chat.svg)](https://www.npmjs.com/package/vue-steam-chat)
