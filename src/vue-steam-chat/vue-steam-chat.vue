@@ -291,8 +291,8 @@ export default {
   -webkit-writing-mode: horizontal-tb;
 }
 
-.chatform_footer{
-  color: rgb(143, 152, 160);
+.chatform_footer {
+  color: #8f98a0;
   display: block;
   font-size: 14px;
   height: 36px;
@@ -300,66 +300,16 @@ export default {
   text-align: right;
   width: 302px;
 }
+
 .sendButton {
-  align-items: flex-start;
-  background-attachment: scroll;
-  background-clip: border-box;
-  background-color: rgba(0, 0, 0, 0);
-  background-image: linear-gradient(rgb(47, 137, 188) 5%, rgb(23, 67, 92) 95%);
-  background-origin: padding-box;
-  background-size: auto;
-  border-bottom-color: rgb(33, 33, 33);
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-image-outset: 0px;
-  border-image-repeat: stretch;
-  border-image-slice: 100%;
-  border-image-source: none;
-  border-image-width: 1;
-  border-left-color: rgb(33, 33, 33);
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-right-color: rgb(33, 33, 33);
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-top-color: rgb(33, 33, 33);
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  border-top-style: solid;
-  border-top-width: 1px;
+  background-image: linear-gradient(#2f89bc 5%, #17435c 95%);
+  border: 1px solid #212121;
+  border-radius: 2px;
   box-sizing: border-box;
-  color: rgb(164, 215, 245);
+  color: #a4d7f5;
   cursor: pointer;
-  display: inline-block;
-  font-size: 13.3333px;
-  font-stretch: normal;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
   height: 34px;
-  letter-spacing: normal;
-  line-height: normal;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
-  padding-bottom: 1px;
-  padding-left: 1px;
-  padding-right: 1px;
-  padding-top: 1px;
-  text-align: center;
-  text-decoration: none;
-  text-indent: 0px;
-  text-rendering: auto;
-  text-shadow: none;
-  text-transform: none;
   width: 76px;
-  word-spacing: 0px;
-  writing-mode: lr-tb;
-  -webkit-appearance: none;
-  -webkit-writing-mode: horizontal-tb;
 }
 
 div::-webkit-scrollbar:vertical, iframe::-webkit-scrollbar:vertical {
