@@ -134,16 +134,14 @@ export default {
 .chat_message_self {
   color: #8F98A0;
   display: block;
-  font-size: 14px;
   height: 16px;
   text-align: left;
   word-wrap: break-word;
 }
 
-.chat_timestamp{
+.chat_timestamp {
   color: #8F98A0;
   display: inline;
-  font-size: 14px;
   height: auto;
   text-align: left;
   width: auto;
@@ -153,7 +151,6 @@ export default {
 .personaOnline{
   color: #57CBDE;
   display: inline;
-  font-size: 14px;
   height: auto;
   text-align: left;
   width: auto;
@@ -177,14 +174,6 @@ export default {
   font-size: 14px;
   height: 107px;
   left: 9px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
   position: absolute;
   right: 9px;
   text-align: left;
@@ -195,20 +184,11 @@ export default {
   background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #212121;
   border-radius: 3px;
-  border-image-outset: 0px;
-  border-image-repeat: stretch;
-  border-image-slice: 100%;
-  border-image-source: none;
-  border-image-width: 1;
   box-shadow: #3D3D3D 2px 2px 4px 1px inset;
   color: #C6D4DF;
   display: block;
-  font-size: 14px;
   height: 37px;
   margin-bottom: 6px;
-  outline-color: #C6D4DF;
-  outline-style: none;
-  outline-width: 0px;
   padding: 4px 6px;
   text-align: left;
   width: 288px;
@@ -216,62 +196,14 @@ export default {
 
 #chatmessage {
   background-color: rgba(0, 0, 0, 0);
-  border-bottom-color: rgb(198, 212, 223);
-  border-bottom-style: none;
-  border-bottom-width: 0px;
-  border-image-outset: 0px;
-  border-image-repeat: stretch;
-  border-image-slice: 100%;
-  border-image-source: none;
-  border-image-width: 1;
-  border-left-color: rgb(198, 212, 223);
-  border-left-style: none;
-  border-left-width: 0px;
-  border-right-color: rgb(198, 212, 223);
-  border-right-style: none;
-  border-right-width: 0px;
-  border-top-color: rgb(198, 212, 223);
-  border-top-style: none;
-  border-top-width: 0px;
-  box-shadow: none;
-  color: rgb(198, 212, 223);
-  cursor: auto;
-  display: inline-block;
-  flex-direction: column;
+  border: 0px;
+  color: #c6d4df;
   font-size: 13px;
-  font-stretch: normal;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
   height: 30px;
-  letter-spacing: normal;
-  line-height: normal;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
-  outline-color: rgb(198, 212, 223);
-  outline-style: none;
   outline-width: 0px; 
-  padding-bottom: 2px;
-  padding-left: 2px;
-  padding-right: 2px;
-  padding-top: 2px;
+  padding: 2px;
   resize: none;
-  text-align: start;
-  text-indent: 0px;
-  text-rendering: auto;
-  text-shadow: none;
-  text-transform: none; 
-  white-space: pre-wrap;
   width: 288px;
-  word-spacing: 0px;
-  word-wrap: break-word;
-  writing-mode: lr-tb;
-  -webkit-appearance: none;
-  -webkit-rtl-ordering: logical;
-  -webkit-user-select: text;
-  -webkit-writing-mode: horizontal-tb;
 }
 
 .chatform_footer {
