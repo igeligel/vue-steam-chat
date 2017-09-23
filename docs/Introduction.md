@@ -1,1 +1,1 @@
->  A Vue.js component module, below are the docs of every component created under src
+>  A Vue.js component to display a steam like chat box on your website.
