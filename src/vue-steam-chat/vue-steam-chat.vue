@@ -4,8 +4,8 @@
       <div class="vue-steam-chat__wrapper--scroll">
         <div class="vue-steam-chat__message-list">
           <div class="vue-steam-chat__message" v-for="message in messages">
-            <span class="vue-steam-chat__time" v-text="formatTime(message.time)"></span> 
-            <span class="vue-steam-chat__username" v-text="message.username"></span>: 
+            <span class="vue-steam-chat__time" v-text="formatTime(message.time)"></span>
+            <span class="vue-steam-chat__username" v-text="message.username"></span>:
             <span v-text="message.text"></span>
           </div>
         </div>
@@ -43,7 +43,7 @@ export default {
     */
     messages: {
       type: Array,
-      default: [],
+      default: () => [],
     },
   },
   methods: {
@@ -183,7 +183,7 @@ export default {
   color: #c6d4df;
   font-size: 13px;
   height: 30px;
-  outline-width: 0px; 
+  outline-width: 0px;
   padding: 2px;
   resize: none;
   width: 100%;
