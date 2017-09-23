@@ -10,7 +10,7 @@
     "build": "vue build ./src/index.js --config ./build.config.js --dist ./dist/ --prod --lib",
     "build:doc": "vue-styleguidist build",
     "serve": "vue-styleguidist server",
-    "unit": "jest"
+    "test": "jest"
   },
   "keywords": [
     "vue",
