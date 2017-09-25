@@ -62,14 +62,40 @@ describe('Test messages property', () => {
     wrapper.setProps({ messages });
     const dateInComponent = wrapper.find('.vue-steam-chat__time').text();
     const date = new Date(1506117496 * 1000);
-    const calculatedDate = `[${date.getHours()}:${date.getMinutes()}]`;
+    const hours = date.getHours() < 10
+      ? `0${date.getHours()}`
+      : date.getHours();
+    const minutes = date.getMinutes() < 10
+      ? `0${date.getMinutes()}`
+      : date.getMinutes()
+    const calculatedDate = `[${hours}:${minutes}]`;
+    expect(dateInComponent).toBe(calculatedDate);
+  });
+
+  it('Test prepended 0\'s in time', () => {
+    const wrapper = mount(VueSteamChat);
+    const date = new Date("October 05, 2014 05:05:00");
+    const messages = [{
+      time: date.getTime() / 1000,
+      username: 'Gaben',
+      text: 'I am really rich!!!',
+    }];
+    wrapper.setProps({ messages });
+    const dateInComponent = wrapper.find('.vue-steam-chat__time').text();
+    const hours = date.getHours() < 10
+      ? `0${date.getHours()}`
+      : date.getHours();
+    const minutes = date.getMinutes() < 10
+      ? `0${date.getMinutes()}`
+      : date.getMinutes()
+    const calculatedDate = `[${hours}:${minutes}]`;
     expect(dateInComponent).toBe(calculatedDate);
   });
 });
 
 describe('Textarea and Send functionality', () => {
   it('Test if event is triggered after button click', () => {
-    const stub = jest.fn()
+    const stub = jest.fn();
     const wrapper = mount(VueSteamChat);
     wrapper.setData({ message: 'I am really cool' });
     wrapper.vm.$on('vue-steam-chat-on-message', stub);
