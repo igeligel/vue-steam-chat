@@ -44,6 +44,15 @@ export default {
     messages: {
       type: Array,
       default: () => [],
+      validator: (value) => {
+        if (value.length === 0) return true;
+        const result = value.every(message =>
+          message.hasOwnProperty('time') ||
+          message.hasOwnProperty('username') ||
+          message.hasOwnProperty('text')
+        );
+        return result;
+      },
     },
   },
   methods: {
