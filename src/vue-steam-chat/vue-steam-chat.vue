@@ -49,12 +49,13 @@ export default {
   methods: {
     formatTime(time) {
       const date = new Date(time * 1000);
-      return `[${date.getHours()}:${date.getMinutes()}]`
+      const prependNumber = number => ('0' + number).slice(-2);
+      return `[${prependNumber(date.getHours())}:${prependNumber(date.getMinutes())}]`;
     },
     sendMessage() {
       if (this.message === '') return;
-      this.message = '';
       this.$emit('vue-steam-chat-on-message', this.message);
+      this.message = '';
     },
   },
 }
