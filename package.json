@@ -1,6 +1,6 @@
 {
   "name": "vue-steam-chat",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Vue.js component to imitate the steam chat.",
   "author": "igeligel <kevinigeligeligel@gmail.com>",
   "main": "dist/index.js",
