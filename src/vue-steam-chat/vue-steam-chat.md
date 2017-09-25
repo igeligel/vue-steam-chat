@@ -3,7 +3,7 @@ The component will emit an event `vue-steam-chat-on-message` when a user clicks 
 ### Default example
 
     const messages = [{
-      time: 1506117496,
+      time: 1494392700,
       username: 'Gaben',
       text: 'I am really rich!!!',
     }, {
