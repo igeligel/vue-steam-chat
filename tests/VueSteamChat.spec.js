@@ -103,3 +103,90 @@ describe('Textarea and Send functionality', () => {
     expect(stub).toBeCalledWith('I am really cool');
   });
 });
+
+describe('Test properties', () => {
+  it('Test type of property', () => {
+    const wrapper = mount(VueSteamChat);
+    const messages = wrapper.vm.$options.props.messages;
+    expect(messages.type).toBe(Array);
+  });
+
+  it('Test validator existing', () => {
+    const wrapper = mount(VueSteamChat);
+    const messages = wrapper.vm.$options.props.messages;
+    expect(messages.validator).toBeTruthy();
+  });
+
+  it('Test no attached array to be working', () => {
+    const wrapper = mount(VueSteamChat);
+    const messages = wrapper.vm.$options.props.messages;
+    expect(messages.validator()).toBeTruthy();
+  });
+
+  it('Test empty array is valid', () => {
+    const wrapper = mount(VueSteamChat);
+    const messages = wrapper.vm.$options.props.messages;
+    expect(messages.validator([])).toBeTruthy();
+  });
+
+  it('Test valid array', () => {
+    const wrapper = mount(VueSteamChat);
+    const messages = wrapper.vm.$options.props.messages;
+    const messagesPayload = [{
+      time: new Date().getTime() / 1000,
+      username: 'Gaben',
+      text: 'I am really rich!!!',
+    }];
+    expect(messages.validator(messagesPayload)).toBeTruthy();
+  });
+
+  it('Test no time property', () => {
+    const wrapper = mount(VueSteamChat);
+    const messages = wrapper.vm.$options.props.messages;
+    const messagesPayload = [{
+      username: 'Gaben',
+      text: 'I am really rich!!!',
+    }];
+    expect(messages.validator(messagesPayload)).toBeFalsy();
+  });
+
+  it('Test no username property', () => {
+    const wrapper = mount(VueSteamChat);
+    const messages = wrapper.vm.$options.props.messages;
+    const messagesPayload = [{
+      time: new Date().getTime() / 1000,
+      text: 'I am really rich!!!',
+    }];
+    expect(messages.validator(messagesPayload)).toBeFalsy();
+  });
+
+  it('Test no text property', () => {
+    const wrapper = mount(VueSteamChat);
+    const messages = wrapper.vm.$options.props.messages;
+    const messagesPayload = [{
+      time: new Date().getTime() / 1000,
+      username: 'Gaben',
+    }];
+    expect(messages.validator(messagesPayload)).toBeFalsy();
+  });
+
+  it('Test invalid multi array', () => {
+    const wrapper = mount(VueSteamChat);
+    const messages = wrapper.vm.$options.props.messages;
+    const messagesPayload = [{
+      time: new Date().getTime() / 1000,
+      username: 'Gaben',
+      text: 'I am really rich!!!',
+    }, {
+      time: new Date().getTime() / 1000,
+      username: 'Gaben',
+    }];
+    expect(messages.validator(messagesPayload)).toBeFalsy();
+  });
+
+  it('Test default property', () => {
+    const wrapper = mount(VueSteamChat);
+    const messages = wrapper.vm.$options.props.messages;
+    expect(messages.default()).toEqual([]);
+  });
+});
