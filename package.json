@@ -24,6 +24,14 @@
   "files": [
     "dist/"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/igeligel/vue-steam-chat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/igeligel/vue-steam-chat/issues"
+  },
+  "homepage": "https://github.com/igeligel/vue-steam-chat#vue-steam-chat---a-steam-like-chat-component",
   "dependencies": {
     "vue": "^2.4.1"
   },
