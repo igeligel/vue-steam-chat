@@ -53,6 +53,7 @@ export default {
     },
     sendMessage() {
       if (this.message === '') return;
+      this.message = '';
       this.$emit('vue-steam-chat-on-message', this.message);
     },
   },
