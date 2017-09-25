@@ -45,10 +45,11 @@ export default {
       type: Array,
       default: () => [],
       validator: (value) => {
+        if (!value) return true;
         if (value.length === 0) return true;
         const result = value.every(message =>
-          message.hasOwnProperty('time') ||
-          message.hasOwnProperty('username') ||
+          message.hasOwnProperty('time') &&
+          message.hasOwnProperty('username') &&
           message.hasOwnProperty('text')
         );
         return result;
