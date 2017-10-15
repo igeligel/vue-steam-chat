@@ -3,7 +3,11 @@
     <div class="vue-steam-chat__wrapper">
       <div class="vue-steam-chat__wrapper--scroll">
         <div class="vue-steam-chat__message-list">
-          <div class="vue-steam-chat__message" v-for="message in messages">
+          <div
+            class="vue-steam-chat__message"
+            v-for="message in messages"
+            :key="`${message.time}${message.username}${message.text}`"
+          >
             <span class="vue-steam-chat__time" v-text="formatTime(message.time)"></span>
             <span class="vue-steam-chat__username" v-text="message.username"></span>:
             <span v-text="message.text"></span>
