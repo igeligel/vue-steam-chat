@@ -612,10 +612,6 @@ babel-plugin-jsx-v-model@^2.0.1:
     html-tags "^2.0.0"
     svg-tags "^1.0.0"
 
-babel-plugin-jsx-vue-functional@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-jsx-vue-functional/-/babel-plugin-jsx-vue-functional-2.1.0.tgz#5630a0c86fe1904d28c30465e6bf1cf71235a239"
-
 babel-plugin-module-resolver@^2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-module-resolver/-/babel-plugin-module-resolver-2.7.1.tgz#18be3c42ddf59f7a456c9e0512cd91394f6e4be1"
@@ -636,7 +632,7 @@ babel-plugin-syntax-class-properties@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-class-properties/-/babel-plugin-syntax-class-properties-6.13.0.tgz#d7eb23b79a317f8543962c505b827c7d6cac27de"
 
-babel-plugin-syntax-decorators@^6.13.0:
+babel-plugin-syntax-decorators@^6.1.18, babel-plugin-syntax-decorators@^6.13.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-decorators/-/babel-plugin-syntax-decorators-6.13.0.tgz#312563b4dbde3cc806cee3e416cceeaddd11ac0b"
 
@@ -688,6 +684,14 @@ babel-plugin-transform-class-properties@^6.24.1:
     babel-plugin-syntax-class-properties "^6.8.0"
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
+
+babel-plugin-transform-decorators-legacy@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-decorators-legacy/-/babel-plugin-transform-decorators-legacy-1.3.4.tgz#741b58f6c5bce9e6027e0882d9c994f04f366925"
+  dependencies:
+    babel-plugin-syntax-decorators "^6.1.18"
+    babel-runtime "^6.2.0"
+    babel-template "^6.3.0"
 
 babel-plugin-transform-decorators@^6.24.1:
   version "6.24.1"
@@ -1041,17 +1045,19 @@ babel-preset-jest@^21.2.0:
     babel-plugin-jest-hoist "^21.2.0"
     babel-plugin-syntax-object-rest-spread "^6.13.0"
 
-babel-preset-poi@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-poi/-/babel-preset-poi-1.0.0.tgz#df8f7197146e7c2dcbdd2562b3b538fbaf7922dd"
+babel-preset-poi@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/babel-preset-poi/-/babel-preset-poi-1.1.1.tgz#e23e8313445b09a583a4fca56f9ffa5312ada103"
   dependencies:
     babel-macros "^1.2.0"
     babel-plugin-syntax-dynamic-import "^6.18.0"
+    babel-plugin-transform-class-properties "^6.24.1"
+    babel-plugin-transform-decorators-legacy "^1.3.4"
     babel-plugin-transform-object-rest-spread "^6.26.0"
     babel-plugin-transform-react-jsx "^6.24.1"
     babel-plugin-transform-runtime "^6.23.0"
     babel-preset-env "^1.6.1"
-    babel-preset-vue "^1.2.1"
+    babel-preset-vue "^2.0.0"
     babel-runtime "^6.26.0"
 
 babel-preset-stage-2@^6.24.1:
@@ -1073,14 +1079,13 @@ babel-preset-stage-3@^6.24.1:
     babel-plugin-transform-exponentiation-operator "^6.24.1"
     babel-plugin-transform-object-rest-spread "^6.22.0"
 
-babel-preset-vue@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/babel-preset-vue/-/babel-preset-vue-1.2.1.tgz#b0de8977e0ce981fc6824cf0a537917a02a6fe87"
+babel-preset-vue@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-vue/-/babel-preset-vue-2.0.0.tgz#441f7cf75836a0fa908a5df62bc243f8f9109d2c"
   dependencies:
     babel-helper-vue-jsx-merge-props "^2.0.2"
     babel-plugin-jsx-event-modifiers "^2.0.2"
     babel-plugin-jsx-v-model "^2.0.1"
-    babel-plugin-jsx-vue-functional "^2.1.0"
     babel-plugin-syntax-jsx "^6.18.0"
     babel-plugin-transform-vue-jsx "^3.5.0"
 
@@ -1096,14 +1101,14 @@ babel-register@^6.26.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0, babel-runtime@^6.9.2:
+babel-runtime@^6.18.0, babel-runtime@^6.2.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0, babel-runtime@^6.9.2:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:
     core-js "^2.4.0"
     regenerator-runtime "^0.11.0"
 
-babel-template@^6.16.0, babel-template@^6.24.1, babel-template@^6.26.0:
+babel-template@^6.16.0, babel-template@^6.24.1, babel-template@^6.26.0, babel-template@^6.3.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-template/-/babel-template-6.26.0.tgz#de03e2d16396b069f46dd9fff8521fb1a0e35e02"
   dependencies:
@@ -5523,27 +5528,32 @@ poi-dev-utils@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/poi-dev-utils/-/poi-dev-utils-1.0.1.tgz#c3089d1db60e9d2c56343decc6a3b9647d577c14"
 
-poi-load-config@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/poi-load-config/-/poi-load-config-1.1.1.tgz#53dcbbac6b7db58604ef1f98263fab919ce32ad9"
+poi-load-config@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/poi-load-config/-/poi-load-config-1.1.2.tgz#5db24d0e2d149ada2c35369f4de21d1924365bda"
   dependencies:
     babel-core "^6.24.1"
     babel-load-config "^1.0.0"
     postcss-load-config "^1.2.0"
-    use-config "^1.0.0"
+    use-config "^1.1.0"
 
-poi@9.5.0:
-  version "9.5.0"
-  resolved "https://registry.yarnpkg.com/poi/-/poi-9.5.0.tgz#34289037caed00e8ee4f64975e1d524be93ebebf"
+poi-webpack-node-externals@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/poi-webpack-node-externals/-/poi-webpack-node-externals-2.0.0.tgz#3e23ae0673705f5f44b23ecd194b85c724de91fa"
+
+poi@9.5.7:
+  version "9.5.7"
+  resolved "https://registry.yarnpkg.com/poi/-/poi-9.5.7.tgz#3573e59de4817f7aaedbfac1238ad0dc9830e670"
   dependencies:
     address "^1.0.1"
     autoprefixer "^7.1.2"
     babel-core "^6.24.1"
     babel-loader "^7.0.0"
-    babel-preset-poi "^1.0.0"
+    babel-preset-poi "^1.1.1"
     cac "^4.0.0"
     case-sensitive-paths-webpack-plugin "^2.0.0"
     chalk "^2.0.1"
+    chokidar "^1.7.0"
     clipboardy "^1.1.2"
     co "^4.6.0"
     copy-webpack-plugin "^4.0.1"
@@ -5561,7 +5571,8 @@ poi@9.5.0:
     opn "^5.0.0"
     parse-json-config "^0.2.0"
     poi-dev-utils "^1.0.1"
-    poi-load-config "^1.1.1"
+    poi-load-config "^1.1.2"
+    poi-webpack-node-externals "^2.0.0"
     post-compile-webpack-plugin "^0.1.1"
     postcss-loader "^2.0.6"
     rimraf "^2.6.1"
@@ -5578,7 +5589,6 @@ poi@9.5.0:
     webpack-dev-server "^2.9.2"
     webpack-handle-css-loader "^2.0.1"
     webpack-merge "^4.1.0"
-    webpack-node-externals "^1.6.0"
     yargs "^9.0.1"
     yarn-global "^1.1.0"
 
@@ -7601,9 +7611,9 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
-use-config@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/use-config/-/use-config-1.0.2.tgz#7b04c1f80067ee251fefd14eecaec237be96ad22"
+use-config@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/use-config/-/use-config-1.1.0.tgz#0a0c7760e1f12cd546154fc67afefe49d048fbb4"
   dependencies:
     load-json-file "^2.0.0"
     path-exists "^3.0.0"
@@ -7695,9 +7705,9 @@ vue-class-component@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/vue-class-component/-/vue-class-component-6.0.0.tgz#abb87f0acdc77428973401ca3bfaae133c826432"
 
-vue-docgen-api@^2.1.3:
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/vue-docgen-api/-/vue-docgen-api-2.1.3.tgz#1232724157f8a4ac28726b18350be863bb87a05d"
+vue-docgen-api@^2.1.6:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/vue-docgen-api/-/vue-docgen-api-2.2.0.tgz#69414f20f5b1e44887fecb6738661276c4ce6b24"
   dependencies:
     babel-core "^6.25.0"
     babel-plugin-transform-object-rest-spread "^6.23.0"
@@ -7749,6 +7759,24 @@ vue-loader@^13.0.0, vue-loader@^13.0.4, vue-loader@^13.3.0:
     vue-style-loader "^3.0.0"
     vue-template-es2015-compiler "^1.6.0"
 
+vue-loader@^13.5.0:
+  version "13.5.0"
+  resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-13.5.0.tgz#52f7b3790a267eff80012b77ea187a54586dd5d4"
+  dependencies:
+    consolidate "^0.14.0"
+    hash-sum "^1.0.2"
+    loader-utils "^1.1.0"
+    lru-cache "^4.1.1"
+    postcss "^6.0.8"
+    postcss-load-config "^1.1.0"
+    postcss-selector-parser "^2.0.0"
+    prettier "^1.7.0"
+    resolve "^1.4.0"
+    source-map "^0.6.1"
+    vue-hot-reload-api "^2.2.0"
+    vue-style-loader "^3.0.0"
+    vue-template-es2015-compiler "^1.6.0"
+
 vue-property-decorator@6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/vue-property-decorator/-/vue-property-decorator-6.0.0.tgz#bb651b293542e31db0d24f36f4b0250ef08d8515"
@@ -7763,9 +7791,9 @@ vue-style-loader@^3.0.0, vue-style-loader@^3.0.1:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
-vue-styleguidist@1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/vue-styleguidist/-/vue-styleguidist-1.3.1.tgz#9daa66a91a8b2d0f7ef5af22b92969a339ce5c3f"
+vue-styleguidist@1.3.5:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/vue-styleguidist/-/vue-styleguidist-1.3.5.tgz#b6ccc91b8ab618b87329bf9f055a0053218be04e"
   dependencies:
     ast-types "^0.9.13"
     buble "^0.15.2"
@@ -7823,7 +7851,7 @@ vue-styleguidist@1.3.1:
     uglifyjs-webpack-plugin "1.0.0-beta.3"
     unist-util-visit "^1.1.3"
     vue "^2.5.2"
-    vue-docgen-api "^2.1.3"
+    vue-docgen-api "^2.1.6"
     vue-loader "^13.3.0"
     vue-template-compiler "^2.5.2"
     vue-webpack-loaders "^1.0.5"
@@ -7849,9 +7877,9 @@ vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
 
-vue-test-utils@1.0.0-beta.4:
-  version "1.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/vue-test-utils/-/vue-test-utils-1.0.0-beta.4.tgz#4f69d9001bdcb38525100b066e24fe4825057519"
+vue-test-utils@1.0.0-beta.6:
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/vue-test-utils/-/vue-test-utils-1.0.0-beta.6.tgz#65c13dd79ac45a7c4a1709e162bf86fb6a986db0"
   dependencies:
     lodash "^4.17.4"
 
@@ -8029,10 +8057,6 @@ webpack-merge@^4.1.0:
   dependencies:
     lodash "^4.17.4"
 
-webpack-node-externals@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/webpack-node-externals/-/webpack-node-externals-1.6.0.tgz#232c62ec6092b100635a3d29d83c1747128df9bd"
-
 webpack-sources@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.0.1.tgz#c7356436a4d13123be2e2426a05d1dad9cbe65cf"
@@ -8040,7 +8064,34 @@ webpack-sources@^1.0.1:
     source-list-map "^2.0.0"
     source-map "~0.5.3"
 
-webpack@^3.7.1, webpack@^3.8.1:
+webpack@^3.10.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.10.0.tgz#5291b875078cf2abf42bdd23afe3f8f96c17d725"
+  dependencies:
+    acorn "^5.0.0"
+    acorn-dynamic-import "^2.0.0"
+    ajv "^5.1.5"
+    ajv-keywords "^2.0.0"
+    async "^2.1.2"
+    enhanced-resolve "^3.4.0"
+    escope "^3.6.0"
+    interpret "^1.0.0"
+    json-loader "^0.5.4"
+    json5 "^0.5.1"
+    loader-runner "^2.3.0"
+    loader-utils "^1.1.0"
+    memory-fs "~0.4.1"
+    mkdirp "~0.5.0"
+    node-libs-browser "^2.0.0"
+    source-map "^0.5.3"
+    supports-color "^4.2.1"
+    tapable "^0.2.7"
+    uglifyjs-webpack-plugin "^0.4.6"
+    watchpack "^1.4.0"
+    webpack-sources "^1.0.1"
+    yargs "^8.0.2"
+
+webpack@^3.7.1:
   version "3.8.1"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.8.1.tgz#b16968a81100abe61608b0153c9159ef8bb2bd83"
   dependencies:
