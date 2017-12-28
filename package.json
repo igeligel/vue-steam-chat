@@ -7,23 +7,20 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint src",
-    "build": "node ./node_modules/poi/bin/cli.js build ./src/index.js --format cjs",
+    "build":
+      "node ./node_modules/poi/bin/cli.js build ./src/index.js --format cjs",
     "build:doc": "vue-styleguidist build",
     "serve": "vue-styleguidist server",
     "test": "jest",
-    "test:coverage": "node node_modules/.bin/jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "test:coverage":
+      "node node_modules/.bin/jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "precommit": "lint-staged"
   },
-  "keywords": [
-    "vue",
-    "component",
-    "steam",
-    "chat",
-    "csgo",
-    "gambling"
-  ],
-  "files": [
-    "dist/"
-  ],
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
+  },
+  "keywords": ["vue", "component", "steam", "chat", "csgo", "gambling"],
+  "files": ["dist/"],
   "repository": {
     "type": "git",
     "url": "https://github.com/igeligel/vue-steam-chat.git"
@@ -31,7 +28,8 @@
   "bugs": {
     "url": "https://github.com/igeligel/vue-steam-chat/issues"
   },
-  "homepage": "https://github.com/igeligel/vue-steam-chat#vue-steam-chat---a-steam-like-chat-component",
+  "homepage":
+    "https://github.com/igeligel/vue-steam-chat#vue-steam-chat---a-steam-like-chat-component",
   "dependencies": {
     "vue": "2.5.13"
   },
@@ -44,9 +42,12 @@
     "css-loader": "^0.28.7",
     "eslint": "^3.19.0",
     "eslint-plugin-vue": "beta",
+    "husky": "^0.14.3",
     "jest": "^22.0.3",
     "jest-vue-preprocessor": "1.3.1",
+    "lint-staged": "^6.0.0",
     "poi": "9.6.2",
+    "prettier": "^1.9.2",
     "sinon": "^3.3.0",
     "vue-loader": "^13.6.0",
     "vue-styleguidist": "1.3.9",
@@ -57,11 +58,7 @@
     "webpack": "^3.10.0"
   },
   "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "vue"
-    ],
+    "moduleFileExtensions": ["js", "json", "vue"],
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
       ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
