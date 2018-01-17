@@ -18,11 +18,13 @@ describe('Test messages property', () => {
 
   it('Test single payload', () => {
     const wrapper = mount(VueSteamChat);
-    const messages = [{
-      time: 1506117496,
-      username: 'Gaben',
-      text: 'I am really rich!!!',
-    }];
+    const messages = [
+      {
+        time: 1506117496,
+        username: 'Gaben',
+        text: 'I am really rich!!!',
+      },
+    ];
     wrapper.setProps({ messages });
     const vueSteamChatMessages = wrapper.findAll('.vue-steam-chat__message');
     expect(vueSteamChatMessages).toHaveLength(1);
@@ -30,15 +32,18 @@ describe('Test messages property', () => {
 
   it('Test multiple payloads', () => {
     const wrapper = mount(VueSteamChat);
-    const messages = [{
-      time: 1506117496,
-      username: 'Gaben',
-      text: 'I am really rich!!!',
-    }, {
-      time: 1506117496,
-      username: 'Cool User',
-      text: 'Lorem Ipsum',
-    }];
+    const messages = [
+      {
+        time: 1506117496,
+        username: 'Gaben',
+        text: 'I am really rich!!!',
+      },
+      {
+        time: 1506117496,
+        username: 'Cool User',
+        text: 'Lorem Ipsum',
+      },
+    ];
     wrapper.setProps({ messages });
     let vueSteamChatMessages = wrapper.findAll('.vue-steam-chat__message');
     expect(vueSteamChatMessages).toHaveLength(2);
@@ -54,40 +59,40 @@ describe('Test messages property', () => {
 
   it('Test date abbreviation', () => {
     const wrapper = mount(VueSteamChat);
-    const messages = [{
-      time: 1506117496,
-      username: 'Gaben',
-      text: 'I am really rich!!!',
-    }];
+    const messages = [
+      {
+        time: 1506117496,
+        username: 'Gaben',
+        text: 'I am really rich!!!',
+      },
+    ];
     wrapper.setProps({ messages });
     const dateInComponent = wrapper.find('.vue-steam-chat__time').text();
     const date = new Date(1506117496 * 1000);
-    const hours = date.getHours() < 10
-      ? `0${date.getHours()}`
-      : date.getHours();
-    const minutes = date.getMinutes() < 10
-      ? `0${date.getMinutes()}`
-      : date.getMinutes()
+    const hours =
+      date.getHours() < 10 ? `0${date.getHours()}` : date.getHours();
+    const minutes =
+      date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
     const calculatedDate = `[${hours}:${minutes}]`;
     expect(dateInComponent).toBe(calculatedDate);
   });
 
-  it('Test prepended 0\'s in time', () => {
+  it("Test prepended 0's in time", () => {
     const wrapper = mount(VueSteamChat);
-    const date = new Date("October 05, 2014 05:05:00");
-    const messages = [{
-      time: date.getTime() / 1000,
-      username: 'Gaben',
-      text: 'I am really rich!!!',
-    }];
+    const date = new Date('October 05, 2014 05:05:00');
+    const messages = [
+      {
+        time: date.getTime() / 1000,
+        username: 'Gaben',
+        text: 'I am really rich!!!',
+      },
+    ];
     wrapper.setProps({ messages });
     const dateInComponent = wrapper.find('.vue-steam-chat__time').text();
-    const hours = date.getHours() < 10
-      ? `0${date.getHours()}`
-      : date.getHours();
-    const minutes = date.getMinutes() < 10
-      ? `0${date.getMinutes()}`
-      : date.getMinutes()
+    const hours =
+      date.getHours() < 10 ? `0${date.getHours()}` : date.getHours();
+    const minutes =
+      date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
     const calculatedDate = `[${hours}:${minutes}]`;
     expect(dateInComponent).toBe(calculatedDate);
   });
@@ -132,55 +137,66 @@ describe('Test properties', () => {
   it('Test valid array', () => {
     const wrapper = mount(VueSteamChat);
     const messages = wrapper.vm.$options.props.messages;
-    const messagesPayload = [{
-      time: new Date().getTime() / 1000,
-      username: 'Gaben',
-      text: 'I am really rich!!!',
-    }];
+    const messagesPayload = [
+      {
+        time: new Date().getTime() / 1000,
+        username: 'Gaben',
+        text: 'I am really rich!!!',
+      },
+    ];
     expect(messages.validator(messagesPayload)).toBeTruthy();
   });
 
   it('Test no time property', () => {
     const wrapper = mount(VueSteamChat);
     const messages = wrapper.vm.$options.props.messages;
-    const messagesPayload = [{
-      username: 'Gaben',
-      text: 'I am really rich!!!',
-    }];
+    const messagesPayload = [
+      {
+        username: 'Gaben',
+        text: 'I am really rich!!!',
+      },
+    ];
     expect(messages.validator(messagesPayload)).toBeFalsy();
   });
 
   it('Test no username property', () => {
     const wrapper = mount(VueSteamChat);
     const messages = wrapper.vm.$options.props.messages;
-    const messagesPayload = [{
-      time: new Date().getTime() / 1000,
-      text: 'I am really rich!!!',
-    }];
+    const messagesPayload = [
+      {
+        time: new Date().getTime() / 1000,
+        text: 'I am really rich!!!',
+      },
+    ];
     expect(messages.validator(messagesPayload)).toBeFalsy();
   });
 
   it('Test no text property', () => {
     const wrapper = mount(VueSteamChat);
     const messages = wrapper.vm.$options.props.messages;
-    const messagesPayload = [{
-      time: new Date().getTime() / 1000,
-      username: 'Gaben',
-    }];
+    const messagesPayload = [
+      {
+        time: new Date().getTime() / 1000,
+        username: 'Gaben',
+      },
+    ];
     expect(messages.validator(messagesPayload)).toBeFalsy();
   });
 
   it('Test invalid multi array', () => {
     const wrapper = mount(VueSteamChat);
     const messages = wrapper.vm.$options.props.messages;
-    const messagesPayload = [{
-      time: new Date().getTime() / 1000,
-      username: 'Gaben',
-      text: 'I am really rich!!!',
-    }, {
-      time: new Date().getTime() / 1000,
-      username: 'Gaben',
-    }];
+    const messagesPayload = [
+      {
+        time: new Date().getTime() / 1000,
+        username: 'Gaben',
+        text: 'I am really rich!!!',
+      },
+      {
+        time: new Date().getTime() / 1000,
+        username: 'Gaben',
+      },
+    ];
     expect(messages.validator(messagesPayload)).toBeFalsy();
   });
 

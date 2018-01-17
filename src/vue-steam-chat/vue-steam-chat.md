@@ -1,4 +1,6 @@
-The component will emit an event `vue-steam-chat-on-message` when a user clicks the button. The event will have a payload consisting of the content of the textarea.
+The component will emit an event `vue-steam-chat-on-message` when a user clicks
+the button. The event will have a payload consisting of the content of the
+textarea.
 
 ### Default example
 

@@ -6,7 +6,7 @@
   "trailingComma": "all",
   "jsxBracketSameLine": false,
   "parser": "babylon",
-  "noSemi": true,
-  "rcVerbose": true,
-  "arrowParens": "always"
+  "semi": true,
+  "arrowParens": "always",
+  "proseWrap": "always"
 }

@@ -17,7 +17,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --write", "git add"]
+    "*.{js,json,css,md,vue}": ["prettier --write", "git add"]
   },
   "keywords": ["vue", "component", "steam", "chat", "csgo", "gambling"],
   "files": ["dist/"],

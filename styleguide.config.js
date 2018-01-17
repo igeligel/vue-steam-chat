@@ -11,13 +11,13 @@ module.exports = {
       content: 'docs/Introduction.md',
       components: 'src/**/vue-steam-chat.vue',
       // ignore: ['src/ignored-component/ignored-component.vue'],
-      sections: []
+      sections: [],
     },
   ],
   webpackConfig: {
     module: {
-			loaders,
-		}
+      loaders,
+    },
   },
-  serverPort: 6062
+  serverPort: 6062,
 };
