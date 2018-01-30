@@ -1,4 +1,4 @@
-import { mount } from 'vue-test-utils';
+import { mount } from '@vue/test-utils';
 import sinon from 'sinon';
 import VueSteamChat from '@/vue-steam-chat/vue-steam-chat.vue';
 
