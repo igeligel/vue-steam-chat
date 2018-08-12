@@ -5,7 +5,7 @@ import VueSteamChat from '@/vue-steam-chat/vue-steam-chat.vue';
 describe('General tests', () => {
   it('Test if empty component is a vue instance', () => {
     const wrapper = mount(VueSteamChat);
-    expect(wrapper.isVueComponent).toBe(true);
+    expect(wrapper.isVueInstance()).toBe(true);
   });
 });
 
@@ -30,7 +30,7 @@ describe('Test messages property', () => {
     expect(vueSteamChatMessages).toHaveLength(1);
   });
 
-  it('Test multiple payloads', () => {
+  it('Test two payloads', () => {
     const wrapper = mount(VueSteamChat);
     const messages = [
       {
@@ -47,13 +47,29 @@ describe('Test messages property', () => {
     wrapper.setProps({ messages });
     let vueSteamChatMessages = wrapper.findAll('.vue-steam-chat__message');
     expect(vueSteamChatMessages).toHaveLength(2);
-    messages.push({
-      time: 1506117496,
-      username: 'Third user',
-      text: 'I am really rich!!!',
-    });
+  });
+
+  it('Test three messages', () => {
+    const wrapper = mount(VueSteamChat);
+    const messages = [
+      {
+        time: 1506117496,
+        username: 'Gaben',
+        text: 'I am really rich!!!',
+      },
+      {
+        time: 1506117496,
+        username: 'Cool User',
+        text: 'Lorem Ipsum',
+      },
+      {
+        time: 1506117496,
+        username: 'Third user',
+        text: 'I am really rich!!!',
+      },
+    ];
     wrapper.setProps({ messages });
-    vueSteamChatMessages = wrapper.findAll('.vue-steam-chat__message');
+    const vueSteamChatMessages = wrapper.findAll('.vue-steam-chat__message');
     expect(vueSteamChatMessages).toHaveLength(3);
   });
 
